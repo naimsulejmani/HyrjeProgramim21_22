@@ -1,7 +1,7 @@
 package cacttus.education.converts;
 
 import java.util.Scanner;
-
+//https://meet.jit.si/CacttusEducationHP2021
 public class RandomTest {
     public static void main(String[] args) {
         //System.out.println(Math.random());//number prej [0,1)
