@@ -23,7 +23,12 @@ public class Detyra2 {
         } else if (operator == '*') {
             rezultati = numberOne * numberTwo;
         } else if (operator == '/') {
+            if(numberTwo == 0){
+                System.out.printf("nuk lejohet pjestimi me 0!");
+                return;
+            }else {
             rezultati = numberOne / numberTwo;
+            }
         } else if (operator == '%') {
             rezultati = numberOne % numberTwo;
         } else {
