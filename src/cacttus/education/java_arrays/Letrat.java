@@ -6,12 +6,22 @@ public class Letrat {
         String[] suits = {"♣", "♦", "♥", "♠"};
         String[] fullDeck = new String[ranks.length * suits.length];
 
+        int fullDeckIndex = 0;
+
 //per cdo suit shko per secilen rank
-        for (int suitIndex = 0; suitIndex < suits.length; suitIndex++) {
-            for (int rankIndex = 0; rankIndex < ranks.length; rankIndex++) {
-                fullDeck[suitIndex * ranks.length + rankIndex] = ranks[rankIndex] + suits[suitIndex];
-                System.out.printf("%4s", fullDeck[suitIndex * ranks.length + rankIndex]);
+        for (int rankIndex = 0; rankIndex < ranks.length; rankIndex++) {
+            for (int suitIndex = 0; suitIndex < suits.length; suitIndex++) {
+
+                //fullDeck[suitIndex * ranks.length + rankIndex] = ranks[rankIndex] + suits[suitIndex];
+                //System.out.printf("%4s", fullDeck[suitIndex * ranks.length + rankIndex]);
+                fullDeck[fullDeckIndex++] = ranks[rankIndex] + suits[suitIndex];
             }
         }
+
+        for (int i = 0; i < fullDeck.length; i++) {
+            System.out.printf("%5s", fullDeck[i]);
+        }
+
+
     }
 }
